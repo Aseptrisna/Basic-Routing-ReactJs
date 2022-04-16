@@ -17,5 +17,5 @@ React bootstrap jalankan perintah:npm install react-bootstrap bootstrap
 2.https://www.cluemediator.com/login-app-create-login-form-in-reactjs-using-secure-rest-api<br/>
 3.https://www.simplilearn.com/tutorials/reactjs-tutorial/login-page-in-reactjs<br/>
 4.https://serverless-stack.com/chapters/create-a-login-page.html<br/>
-npm install sweetalert
-Seven Developer
+npm install sweetalert<br/>
+Seven Developer<br/>
