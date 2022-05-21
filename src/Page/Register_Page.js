@@ -11,6 +11,7 @@ import "../Css/Login.css";
 import Logo from "../Assets/img/key.png";
 import { Navigate } from "react-router-dom";
 import SweetAlert from "../Utils/SweetAlert";
+import services from "../Services/services";
 
 export default class RegisterPage extends Component {
   constructor() {
@@ -58,8 +59,20 @@ export default class RegisterPage extends Component {
     }
   }
   Register(data) {
-    SweetAlert.Succes("Berhasil Daftar Akun")
-    this.setState({redirectToReferrer:true})
+    // SweetAlert.Succes("Berhasil Daftar Akun")
+    // console.log(data)
+    services.Register(data).then((res)=>{
+      // console.log(res.data)
+      if(res.data.status){
+        SweetAlert.Succes(res.data.message)
+        this.setState({redirectToReferrer:true})
+      }else{
+        SweetAlert.Error(res.data.message)
+      }
+
+    }).catch((e)=>{
+      console.log(e)
+    })
   }
 
   render() {
