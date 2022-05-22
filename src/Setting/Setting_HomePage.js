@@ -1,13 +1,25 @@
 import React, { Component } from 'react'
-import { HomePage,Header } from '../Page'
+import { HomePage, Header, Dashboard_Page, HeaderAdmin } from '../Page'
 
 export default class SettingHomePage extends Component {
     render() {
-        return (
-            <div>
-            <Header/>
-            <HomePage/>
-            </div>
-        )
+        const isLogin = localStorage.getItem('isLogin')
+        console.log(isLogin)
+        if (isLogin === "true") {
+            return (
+                <div>
+                    <HeaderAdmin />
+                    <Dashboard_Page />
+                </div>
+            )
+        } else {
+            return (
+                <div>
+                    <Header />
+                    <HomePage />
+                </div>
+            )
+        }
+
     }
 }

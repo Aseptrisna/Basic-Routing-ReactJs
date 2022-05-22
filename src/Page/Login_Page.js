@@ -4,6 +4,7 @@ import "../Css/Login.css";
 import Logo from "../Assets/img/key.png";
 import { Navigate } from "react-router-dom";
 import SweetAlert from '../Utils/SweetAlert'
+import Services from '../Services/services'
 
 export default class LoginPage extends Component {
   constructor() {
@@ -37,9 +38,21 @@ export default class LoginPage extends Component {
     }
   }
   Login(data){
-    SweetAlert.Succes("Berhasil Login")
-    this.setState({redirectToReferrer:true})
+    
+    
     // console.log(data)
+    Services.Login(data).then((res)=>{
+      if(res.data.status){
+        SweetAlert.Succes(res.data.message)
+        this.setState({redirectToReferrer:true})
+        localStorage.setItem("isLogin",true)
+        localStorage.setItem("user",res.data.user)
+      }else{
+        SweetAlert.Error(res.data.message)
+      }
+    }).catch((e)=>{
+      console.log(e)
+    })
   }
 
   render() {
