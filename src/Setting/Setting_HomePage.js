@@ -17,7 +17,8 @@ export default class SettingHomePage extends Component {
             return (
                 <div>
                     <Header />
-                    <HomePage />
+                    <Banner/>
+                    {/* <HomePage /> */}
                 </div>
             )
         }

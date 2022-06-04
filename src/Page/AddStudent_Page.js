@@ -101,7 +101,7 @@ export default class AddStudentPage extends Component {
             />
             <FormLabel>Email</FormLabel>
             <FormControl
-              type="email"
+              type="text"
               className="input"
               placeholder="Masukan Email"
               name="email"
