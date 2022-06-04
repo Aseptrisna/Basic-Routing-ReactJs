@@ -37,8 +37,8 @@ export default class HeaderAdmin extends Component {
                     <Container>
                         <Navbar.Brand href="/">Navbar</Navbar.Brand>
                         <Nav className="me-auto">
-                            <Nav.Link href="/">Add Student</Nav.Link>
-                            <Nav.Link href="/">Data Student</Nav.Link>
+                            <Nav.Link href="/add">Add Student</Nav.Link>
+                            <Nav.Link href="/view">Data Student</Nav.Link>
                             <Nav.Link  onClick={(e)=>this.Logout()}>Logout</Nav.Link>
                             {/* <Nav.Link href="#pricing">Pricing</Nav.Link> */}
                         </Nav>

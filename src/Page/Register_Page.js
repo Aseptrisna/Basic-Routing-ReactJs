@@ -81,6 +81,8 @@ export default class RegisterPage extends Component {
     var nama = this.state.nama;
     var telp = this.state.telp;
     var jeniskelamin = this.state.jeniskelamin;
+
+
     if (this.state.redirectToReferrer) {
       return <Navigate to={"/login"} />;
     }
@@ -135,7 +137,7 @@ export default class RegisterPage extends Component {
             >
               <option value="">Jenis Kelamin</option>
               <option value="laki-laki">Laki-Laki</option>
-              <option value="laki-laki">Perempuan</option>
+              <option value="perempuan">Perempuan</option>
             </Form.Select>
             <Button variant="success" className="button" onClick={(e)=>this.Validate()}>
               Daftar

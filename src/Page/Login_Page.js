@@ -38,8 +38,6 @@ export default class LoginPage extends Component {
     }
   }
   Login(data){
-    
-    
     // console.log(data)
     Services.Login(data).then((res)=>{
       if(res.data.status){
