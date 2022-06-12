@@ -19,6 +19,7 @@ class Services {
     Updatestudent(id, data) {
         return Http.put("students/update/" + id, data)
     }
+
     Deletestudent(id) {
         return Http.delete("students/delete/" + id)
     }

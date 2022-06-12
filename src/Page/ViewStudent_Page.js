@@ -40,8 +40,10 @@ hapus(data){
 
 
 }
-edit(data){
-  // console.log(data)
+
+edit(student){
+  // console.log(student)
+  localStorage.setItem("student",JSON.stringify(student))
 }
 
 renderTable(){
@@ -55,7 +57,7 @@ renderTable(){
         <td>{telp}</td>
         <td>{jeniskelamin}</td>
         <td>{jurusan}</td>
-        <td> <Button variant="success" onClick={(e)=>this.edit(student)}>Edit Data</Button></td>
+        <td> <Button variant="success" href='/edit' onClick={(e)=>this.edit(student)}>Edit Data</Button></td>
         <td> <Button variant="danger"  onClick={(e)=>this.hapus(student)}>Hapus Data</Button></td>
       </tr>
     )

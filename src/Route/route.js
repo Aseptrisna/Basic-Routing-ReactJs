@@ -1,6 +1,6 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom"
-import { SettingHomePage,SettingLoginPage,SettingRegisterPage,SettingStudentView,SettingStudentAdd} from "../Setting";
+import { SettingHomePage,SettingLoginPage,SettingRegisterPage,SettingStudentView,SettingStudentAdd,SettingEditPage} from "../Setting";
 export default function ClassRouter() {
   return (
     <Routes>
@@ -9,6 +9,7 @@ export default function ClassRouter() {
     <Route path="/register" element={ <SettingRegisterPage/> } />
     <Route path="/add" element={ <SettingStudentAdd/> } />
     <Route path="/view" element={ <SettingStudentView/> } />
+    <Route path="/edit" element={ <SettingEditPage/> } />
   </Routes>
   );
 }

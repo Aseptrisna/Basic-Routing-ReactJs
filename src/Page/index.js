@@ -7,4 +7,5 @@ import Dashboard_Page from './Dashboard_Page'
 import Banner from './Component/Banner'
 import AddStudentPage from './AddStudent_Page'
 import ViewStudentPage from './ViewStudent_Page'
-export{HomePage,LoginPage,RegisterPage,Header,HeaderAdmin,Dashboard_Page,Banner,AddStudentPage,ViewStudentPage}
+import EditStudentPage from './EditStudentPage'
+export{HomePage,LoginPage,RegisterPage,Header,HeaderAdmin,Dashboard_Page,Banner,AddStudentPage,ViewStudentPage,EditStudentPage}
